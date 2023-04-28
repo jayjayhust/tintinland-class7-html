@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatiable" content="IE-Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tintinland 第七课作业</title>
+    <script src="./js/web3.min.js"></script>
+    <script src="./js/app.js"></script>
+  </head>
+  <body>
+    <div>
+      <button onclick="connect()">Connect Wallet</button>
+      <div>Chain Id: <span id="chain_id"></span></div>
+      <div>Block Number: <span id="block_number"></span></div>
+      <div>Block Timestamp: <span id="block_timestamp"></span></div>
+      <div>Current Account: <span id="account_address"></span></div>
+      <div>Current Balance: <span id="account_balance"></span></div>
+
+      <hr/>
+
+      <h3>浏览器一键发币</h3>
+      <table border="1">
+        <tr>
+          <td>
+            <div>
+              <label>*ERC20代币工厂合约地址：</label>
+              <input type="text" id="erc20_factory_contract_addr" value="0xa1d137d17fc8b7a5e1d7d5fdf6cc73573bfd7227" placeholder="0x"/>
+            </div>
+            <!-- <hr style="margin-top: 1px;margin-bottom: 1px;"/> -->
+            <div>
+              <label>ERC20模板地址：</label>
+              <input type="text" id="erc20_contract_template_addr" value="" placeholder="0x"/>
+            </div>
+            <!-- <hr style="margin-top: 1px;margin-bottom: 1px;"/> -->
+            <div>
+              <label>*总数量：</label>
+              <input type="text" id="total_supply" value="90" placeholder="0"/>
+            </div>
+            <!-- <hr style="margin-top: 1px;margin-bottom: 1px;"/> -->
+            <div>
+              <label>*代币名称：</label>
+              <input type="text" id="token_name" value="T-ABC" placeholder="Token-ABC"/>
+            </div>
+            <!-- <hr style="margin-top: 1px;margin-bottom: 1px;"/> -->
+            <div>
+              <label>*代币符号：</label>
+              <input type="text" id="token_symbol" value="TABC" placeholder="ABC"/>
+            </div>
+            <!-- <hr style="margin-top: 1px;margin-bottom: 1px;"/> -->
+            <div>
+              <button onclick="create_erc20_token()">发币</button>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <hr/>
+
+    </div>
+  </body>
+</html>
